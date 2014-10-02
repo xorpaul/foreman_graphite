@@ -2,7 +2,7 @@ module ForemanGraphite
   class Engine < ::Rails::Engine
     initializer "setup_graphite", :after => :finisher_hook do |app|
       Foreman::Plugin.register :foreman_graphite do
-        requires_foreman '> 1.6'
+        requires_foreman '> 1.4'
       end
     end
 
